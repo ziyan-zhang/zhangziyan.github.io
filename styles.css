@@ -1,0 +1,86 @@
+/* styles.css */
+
+body {
+    max-width: 80%;
+    word-wrap: break-word;
+    margin: auto;
+    background-color: #fff; /* 默认白色背景 */
+    color: #000; /* 默认文字颜色为黑色 */
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    animation: fadeIn 2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin: auto;
+}
+
+.bordered-paragraph {
+    padding: 20px;
+    border-width: 2px 0;
+    border-style: solid;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.bordered-paragraph p {
+    display: block;
+}
+
+.border-green {
+    border-color: #00561F; /* 深绿色边框 */
+    box-shadow: 
+      inset 0 4px 4px -4px #00561F; /* 移除左边阴影，只保留上面的阴影 */
+}
+
+.border-blue {
+    border-color: #1E3264; /* 深蓝色边框 */
+    box-shadow: 
+      inset 0 4px 4px -4px #1E3264; /* 移除左边阴影，只保留上面的阴影 */
+}
+
+a {
+    display: inline-block;
+    color: #800080; /* 默认链接颜色为紫色 */
+}
+
+a:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 600px) {
+    body {
+        max-width: 100%;
+    }
+}
+
+.dark-mode {
+    background-color: #003366; /* 深蓝色背景 */
+    color: #fff;
+}
+
+.dark-mode a {
+    color: #aad8f1; /* 这是一个较亮的蓝色，与深蓝色背景形成了良好的对比 */
+}
+
+.dark-mode .border-green {
+    border-color: #99cc66; /* 暗色模式下的浅绿色边框 */
+    box-shadow: 0 0 10px #99cc66; /* 添加浅绿色阴影 */
+}
+
+.dark-mode .border-blue {
+    border-color: #6699cc; /* 暗色模式下的浅蓝色边框 */
+    box-shadow: 0 0 10px #6699cc; /* 添加浅蓝色阴影 */
+}
+
+#theme-button {
+    position: fixed; /* 使用固定定位 */
+    right: 20px; /* 距离右边 20px */
+    bottom: 20px; /* 距离底部 20px */
+}
