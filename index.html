@@ -10,9 +10,9 @@
 
 </head>
 <body>
+<body class="dark-mode">
 
 
-  
 <div class="container">
     <div>
         <p style="font-size:100px">&#128521;</p>
@@ -24,8 +24,6 @@
         </ul>
     </div>
 
-    <!-- 加一条虚线 -->
-    <hr style="border-top: 1px dashed #000; width: 100%;">
 
     <div class="bordered-paragraph border-green">
         <p>Now working on file system and operating system.</p>
@@ -56,7 +54,21 @@
   document.getElementById('theme-button').addEventListener('click', function() {
     document.body.classList.toggle('dark-mode');
   });
+
+window.onload = function() {
+  var greenElement = document.querySelector('.border-green');
+  var blueElement = document.querySelector('.border-blue');
+
+  var greenWidth = greenElement.offsetWidth;
+  var blueWidth = blueElement.offsetWidth;
+
+  var maxWidth = Math.max(greenWidth, blueWidth);
+
+  greenElement.style.width = maxWidth + 'px';
+  blueElement.style.width = maxWidth + 'px';
+};
 </script>
 
 
 </html>
+
